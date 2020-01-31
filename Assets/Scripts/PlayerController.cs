@@ -2,6 +2,8 @@
 
 public class PlayerController : MonoBehaviour
 {
+    public Camera Camera;
+
     private InputMaster _inputMaster;
 
     void Awake() {
@@ -11,7 +13,11 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Select(Vector2 screenPos) {
+        var hit = Physics2D.Raycast(Camera.ScreenToWorldPoint(screenPos), Vector2.zero);
 
+        if (hit.collider != null) {
+            
+        }
     }
 
     private void OnEnable() {
