@@ -1,0 +1,33 @@
+{
+    "name": "InputMaster",
+    "maps": [
+        {
+            "name": "Core",
+            "id": "fe54937c-e0e9-4fca-9c72-ad5a37d69a5d",
+            "actions": [
+                {
+                    "name": "Select",
+                    "type": "Value",
+                    "id": "9618f1fe-232c-4152-b452-a383aca2d613",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6601b236-4da5-454b-83e3-fe9bd4885f65",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
