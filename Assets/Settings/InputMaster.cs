@@ -32,7 +32,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""6601b236-4da5-454b-83e3-fe9bd4885f65"",
                     ""path"": ""<Pointer>/position"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Select"",
