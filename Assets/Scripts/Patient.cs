@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class Patient : MonoBehaviour
 {
-    private float blood=100.0f;
+    // How much blood to lose per second
+    public float BloodLossRate = 5f;
+    private float Blood = 100.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        Blood -= BloodLossRate * Time.deltaTime;
     }
 
     public void Heal(float healAmount)
