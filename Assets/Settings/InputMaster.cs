@@ -20,7 +20,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Select"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""9618f1fe-232c-4152-b452-a383aca2d613"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -30,8 +30,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""6601b236-4da5-454b-83e3-fe9bd4885f65"",
-                    ""path"": ""<Pointer>/position"",
+                    ""id"": ""c1ee4977-9c1c-4527-8a8f-af43fd63c7c1"",
+                    ""path"": ""<Mouse>/position"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",

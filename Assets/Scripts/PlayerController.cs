@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     void Awake() {
         _inputMaster = new InputMaster();
 
+        _inputMaster.Core.Select.started += context => print("YOOO");
         _inputMaster.Core.Select.performed += context => Select(context.ReadValue<Vector2>());
     }
 
