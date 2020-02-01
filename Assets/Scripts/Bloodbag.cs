@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bloodbag : ItemScriptableObject
+public class Bloodbag : Item
 {
     public float HealAmount = 33.0f;
 
