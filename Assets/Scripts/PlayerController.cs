@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     public Camera Camera;
+    public Avatar Avatar;
 
     private InputMaster _inputMaster;
 
@@ -10,17 +12,30 @@ public class PlayerController : MonoBehaviour
         _inputMaster = new InputMaster();
 
         _inputMaster.Core.Select.started += context => print("YOOO");
-        _inputMaster.Core.Select.performed += context => Select(context.ReadValue<Vector2>());
+        _inputMaster.Core.Select.performed += context => {
+            Select(Mouse.current.position.ReadValue());
+        };
     }
 
     public void Select(Vector2 screenPos) {
-        var hit = Physics2D.Raycast(Camera.ScreenToWorldPoint(screenPos), Vector2.zero);
-        print($"Clicked {screenPos}");
+        var ray = Camera.ScreenPointToRay(screenPos);
+        var hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
 
         if (hit.collider != null) {
-            // var tray = hit.collider.gameObject.GetComponent<Tray>();
-            // var patient = hit.collider.gameObject.GetComponent<Patient>();
-            // var bloodBank = hit.collider.gameObject.GetComponent<BloodBank>();
+            var item = hit.collider.gameObject.GetComponent<Item>();
+            if (item != null) {
+                Debug.Log("Hit item");
+            }
+
+            var patient = hit.collider.gameObject.GetComponent<Patient>();
+            if (patient != null) {
+                Debug.Log("Hit patient");
+            }
+
+            var bloodBank = hit.collider.gameObject.GetComponent<Bloodbank>();
+            if (bloodBank != null) {
+                Debug.Log("Hit bloodbank");
+            }
         }
     }
 
