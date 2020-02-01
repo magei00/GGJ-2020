@@ -1,18 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class GiveItemCommand : MonoBehaviour
+﻿public class GiveItemCommand : Command
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Patient Patient;
 
-    // Update is called once per frame
-    void Update()
+    public override void ExecuteCommand(Player avatar)
     {
-        
     }
 }

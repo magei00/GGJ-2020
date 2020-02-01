@@ -6,7 +6,7 @@ public class FillBloodBagCommand : Command
 {
     public Bloodbank Bloodbank;
 
-    public override void ExecuteCommand(Avatar avatar)
+    public override void ExecuteCommand(Player avatar)
     {
     }
 }

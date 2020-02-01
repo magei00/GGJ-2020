@@ -6,7 +6,7 @@ public class TakeItemCommand : Command
 {
     public Item Item;
 
-    public override void ExecuteCommand(Avatar avatar)
+    public override void ExecuteCommand(Player avatar)
     {
     }
 }

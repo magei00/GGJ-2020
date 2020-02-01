@@ -2,5 +2,5 @@
 
 public abstract class Command 
 {
-    public abstract void ExecuteCommand(Avatar avatar);
+    public abstract void ExecuteCommand(Player avatar);
 }
