@@ -20,6 +20,6 @@ public class Patient : MonoBehaviour
 
     public void Heal(float healAmount)
     {
-
+        blood = Mathf.Min(blood + healAmount, 100.0f);
     }
 }
