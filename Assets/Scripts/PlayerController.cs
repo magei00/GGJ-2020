@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -6,15 +7,20 @@ public class PlayerController : MonoBehaviour
     public Camera Camera;
     public Avatar Avatar;
 
+    public int QueueSize;
+
+    private Queue<Command> CommandQueue;
+
     private InputMaster _inputMaster;
 
     void Awake() {
         _inputMaster = new InputMaster();
 
-        _inputMaster.Core.Select.started += context => print("YOOO");
         _inputMaster.Core.Select.performed += context => {
             Select(Mouse.current.position.ReadValue());
         };
+
+        CommandQueue = new Queue<Command>(QueueSize);
     }
 
     public void Select(Vector2 screenPos) {
